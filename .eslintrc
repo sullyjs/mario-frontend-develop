@@ -11,7 +11,7 @@
     "browser": true,
     "jest": true
   },
-  "extends": "src/@marioswap-libs/eslint-config-mario",
+  "extends": "./src/@marioswap-libs/eslint-config-mario",
   "rules": {
     "no-console": ["warn", { "allow": ["info", "warn", "error"] }],
     "no-plusplus": 0,
