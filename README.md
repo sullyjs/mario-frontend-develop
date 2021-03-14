@@ -1,6 +1,6 @@
-# 🥞 Mario Frontend
+# 🍄 Mario Frontend
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/7bebf1a3-be7b-4165-afd1-446256acd5e3/deploy-status)](https://app.netlify.com/sites/mario-prod/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/dc553228-7033-4710-984f-9ac4d1cc7e98/deploy-status)](https://app.netlify.com/sites/nostalgic-montalcini-6ca1b0/deploys)
 
 This project contains the main features of the mario application.
 
