@@ -1,5 +1,5 @@
 {
-  "extends": "@marioswap-libs/eslint-config-mario",
+  "extends": "../eslint-config-mario",
   "rules": {
     "import/no-extraneous-dependencies": [
       "error",
