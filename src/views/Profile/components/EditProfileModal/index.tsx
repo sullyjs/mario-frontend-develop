@@ -5,7 +5,7 @@ import useEditProfile, { Views } from './reducer'
 import StartView from './StartView'
 import PauseProfileView from './PauseProfileView'
 import ChangeProfilePicView from './ChangeProfilePicView'
-import ApproveMushroomView from './ApproveMushroomView'
+import ApproveShroomView from './ApproveShroomView'
 
 type EditProfileModalProps = InjectedModalProps
 
@@ -13,7 +13,7 @@ const viewTitle = {
   [Views.START]: { id: 999, label: 'Edit Profile' },
   [Views.CHANGE]: { id: 999, label: 'Change Profile Pic' },
   [Views.REMOVE]: { id: 999, label: 'Remove Profile Pic' },
-  [Views.APPROVE]: { id: 999, label: 'Approve MUSHROOM' },
+  [Views.APPROVE]: { id: 999, label: 'Approve SHROOM' },
 }
 
 const EditProfileModal: React.FC<EditProfileModalProps> = ({ onDismiss }) => {
@@ -32,7 +32,7 @@ const EditProfileModal: React.FC<EditProfileModalProps> = ({ onDismiss }) => {
         )}
         {currentView === Views.REMOVE && <PauseProfileView onDismiss={onDismiss} />}
         {currentView === Views.CHANGE && <ChangeProfilePicView onDismiss={onDismiss} />}
-        {currentView === Views.APPROVE && <ApproveMushroomView goToChange={goToChange} onDismiss={onDismiss} />}
+        {currentView === Views.APPROVE && <ApproveShroomView goToChange={goToChange} onDismiss={onDismiss} />}
       </div>
     </Modal>
   )

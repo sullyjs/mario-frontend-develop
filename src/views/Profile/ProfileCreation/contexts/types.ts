@@ -13,7 +13,7 @@ export interface State {
   teamId: number | null
   tokenId: number | null
   userName: string
-  minimumMushroomRequired: BigNumber
+  minimumShroomRequired: BigNumber
   allowance: BigNumber
 }
 

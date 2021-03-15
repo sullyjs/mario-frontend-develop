@@ -3,8 +3,8 @@ import { PoolConfig, QuoteToken, PoolCategory } from './types'
 const pools: PoolConfig[] = [
   {
     sousId: 0,
-    tokenName: 'MUSHROOM',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    tokenName: 'SHROOM',
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
@@ -21,7 +21,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 64,
     tokenName: 'MARIOCOINS',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -38,7 +38,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 63,
     tokenName: 'BEL',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -54,8 +54,8 @@ const pools: PoolConfig[] = [
   },
   {
     sousId: 62,
-    image: 'MUSHROOMTPT',
-    tokenName: 'MUSHROOM',
+    image: 'SHROOMTPT',
+    tokenName: 'SHROOM',
     stakingTokenName: QuoteToken.TPT,
     stakingTokenAddress: '0xeca41281c24451168a37211f0bc2b8645af45092',
     stakingTokenDecimals: 4,
@@ -74,9 +74,9 @@ const pools: PoolConfig[] = [
   },
   {
     sousId: 61,
-    image: 'TPTMUSHROOM',
+    image: 'TPTSHROOM',
     tokenName: 'TPT',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -93,7 +93,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 60,
     tokenName: 'WATCH',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -110,7 +110,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 59,
     tokenName: 'xMARK',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -127,7 +127,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 58,
     tokenName: 'bMXX',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -144,7 +144,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 57,
     tokenName: 'IOTX',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -161,7 +161,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 56,
     tokenName: 'BOR',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -178,7 +178,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 55,
     tokenName: 'bOPEN',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -194,8 +194,8 @@ const pools: PoolConfig[] = [
   },
   {
     sousId: 54,
-    image: 'MUSHROOMSUSHI',
-    tokenName: 'MUSHROOM',
+    image: 'SHROOMSUSHI',
+    tokenName: 'SHROOM',
     stakingTokenName: QuoteToken.SUSHI,
     stakingTokenAddress: '0x947950bcc74888a40ffa2593c5798f11fc9124c4',
     stakingLimit: 50,
@@ -214,7 +214,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 53,
     tokenName: 'DODO',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -231,7 +231,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 52,
     tokenName: 'SWINGBY',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -248,7 +248,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 51,
     tokenName: 'BRY',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -265,7 +265,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 50,
     tokenName: 'ZEE',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -282,7 +282,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 49,
     tokenName: 'SWGb',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -298,8 +298,8 @@ const pools: PoolConfig[] = [
   },
   {
     sousId: 48,
-    image: 'MUSHROOMCOMP',
-    tokenName: 'MUSHROOM',
+    image: 'SHROOMCOMP',
+    tokenName: 'SHROOM',
     stakingTokenName: QuoteToken.COMP,
     stakingTokenAddress: '0x52ce071bd9b1c4b00a0b92d298c512478cad67e8',
     stakingLimit: 1,
@@ -317,8 +317,8 @@ const pools: PoolConfig[] = [
   },
   {
     sousId: 47,
-    image: 'MUSHROOMCOMP',
-    tokenName: 'MUSHROOM',
+    image: 'SHROOMCOMP',
+    tokenName: 'SHROOM',
     stakingTokenName: QuoteToken.COMP,
     stakingTokenAddress: '0x52ce071bd9b1c4b00a0b92d298c512478cad67e8',
     stakingLimit: 1,
@@ -337,7 +337,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 46,
     tokenName: 'SFP',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -354,7 +354,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 45,
     tokenName: 'LINA',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -371,7 +371,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 44,
     tokenName: 'LINA',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -388,7 +388,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 43,
     tokenName: 'LIT',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -405,7 +405,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 42,
     tokenName: 'HGET',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -422,7 +422,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 41,
     tokenName: 'BDO',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -439,7 +439,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 40,
     tokenName: 'EGLD',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -456,7 +456,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 39,
     tokenName: 'UST',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -473,7 +473,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 38,
     tokenName: 'wSOTE',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -490,7 +490,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 37,
     tokenName: 'FRONT',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -507,7 +507,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 36,
     tokenName: 'Helmet',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -524,7 +524,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 35,
     tokenName: 'BTCST',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -541,7 +541,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 34,
     tokenName: 'BSCX',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -558,7 +558,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 33,
     tokenName: 'TEN',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -575,7 +575,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 32,
     tokenName: 'bALBT',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -592,7 +592,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 31,
     tokenName: 'ASR',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -609,7 +609,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 30,
     tokenName: 'ATM',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -626,7 +626,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 29,
     tokenName: 'OG',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -643,7 +643,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 28,
     tokenName: 'REEF',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -660,7 +660,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 27,
     tokenName: 'DITTO',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -676,8 +676,8 @@ const pools: PoolConfig[] = [
   },
   {
     sousId: 26,
-    image: 'MUSHROOMTWT',
-    tokenName: 'MUSHROOM',
+    image: 'SHROOMTWT',
+    tokenName: 'SHROOM',
     stakingTokenName: QuoteToken.TWT,
     stakingTokenAddress: '0x4b0f1812e5df2a09796481ff14017e6005508003',
     stakingLimit: 1000,
@@ -696,7 +696,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 24,
     tokenName: 'JUV',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -713,7 +713,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 25,
     tokenName: 'PSG',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -730,7 +730,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 22,
     tokenName: 'JUV',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -747,7 +747,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 23,
     tokenName: 'PSG',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -764,7 +764,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 21,
     tokenName: 'VAI',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -780,8 +780,8 @@ const pools: PoolConfig[] = [
   },
   {
     sousId: 20,
-    image: 'MUSHROOMBNB',
-    tokenName: 'MUSHROOM',
+    image: 'SHROOMBNB',
+    tokenName: 'SHROOM',
     stakingTokenName: QuoteToken.BNB,
     stakingLimit: 10,
     contractAddress: {
@@ -799,7 +799,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 19,
     tokenName: 'BNB',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -816,7 +816,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 18,
     tokenName: 'BLK',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -833,7 +833,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 17,
     tokenName: 'BLK',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -850,7 +850,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 16,
     tokenName: 'UNFI',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -867,7 +867,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 15,
     tokenName: 'TWT',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -884,7 +884,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 14,
     tokenName: 'HARD',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -901,7 +901,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 13,
     tokenName: 'bROOBEE',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '',
@@ -918,7 +918,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 12,
     tokenName: 'STAX',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
@@ -935,7 +935,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 11,
     tokenName: 'NAR',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
@@ -952,7 +952,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 10,
     tokenName: 'NYA',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
@@ -969,7 +969,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 9,
     tokenName: 'CTK',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '0xAfd61Dc94f11A70Ae110dC0E0F2061Af5633061A',
@@ -986,7 +986,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 8,
     tokenName: 'TWT',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '0xAfd61Dc94f11A70Ae110dC0E0F2061Af5633061A',
@@ -1003,7 +1003,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 7,
     tokenName: 'INJ',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '0xAfd61Dc94f11A70Ae110dC0E0F2061Af5633061A',
@@ -1053,7 +1053,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 4,
     tokenName: 'SXP',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
@@ -1087,7 +1087,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 2,
     tokenName: 'ALPHA',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
@@ -1121,7 +1121,7 @@ const pools: PoolConfig[] = [
   {
     sousId: -1,
     tokenName: 'XVS',
-    stakingTokenName: QuoteToken.MUSHROOM,
+    stakingTokenName: QuoteToken.SHROOM,
     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     contractAddress: {
       97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',

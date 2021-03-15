@@ -59,16 +59,16 @@ const ComingSoon = () => {
             <Text mb={3}>
               {TranslateString(
                 504,
-                'You’ll pay for the new tokens using MUSHROOM-BNB LP tokens, which means you need to stake equal amounts of MUSHROOM and BNB in a liquidity pool to take part.',
+                'You’ll pay for the new tokens using SHROOM-BNB LP tokens, which means you need to stake equal amounts of SHROOM and BNB in a liquidity pool to take part.',
               )}
             </Text>
             <Text mb={3}>
               <LiquidityLink href="http://localhost:3002/#/add/ETH/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82">
-                {TranslateString(506, 'Get MUSHROOM-BNB LP >')}
+                {TranslateString(506, 'Get SHROOM-BNB LP >')}
               </LiquidityLink>
             </Text>
             <Text mb={3}>
-              {TranslateString(508, 'The project gets the BNB, MarioSwap burns the MUSHROOM.')}
+              {TranslateString(508, 'The project gets the BNB, MarioSwap burns the SHROOM.')}
               <br />
               <strong>{TranslateString(510, 'You get the tokens.')}</strong>
             </Text>

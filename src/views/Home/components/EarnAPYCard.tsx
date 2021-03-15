@@ -6,7 +6,7 @@ import useI18n from 'hooks/useI18n'
 import BigNumber from 'bignumber.js'
 import { QuoteToken } from 'config/constants/types'
 import { useFarms, usePriceBnbBusd } from 'state/hooks'
-import { BLOCKS_PER_YEAR, MUSHROOM_PER_BLOCK, MUSHROOM_POOL_PID } from 'config'
+import { BLOCKS_PER_YEAR, SHROOM_PER_BLOCK, SHROOM_POOL_PID } from 'config'
 
 const StyledFarmStakingCard = styled(Card)`
   margin-left: auto;
@@ -42,24 +42,24 @@ const EarnAPYCard = () => {
 
   const calculateAPY = useCallback(
     (farmsToDisplay) => {
-      const mushroomPriceVsBNB = new BigNumber(farmsLP.find((farm) => farm.pid === MUSHROOM_POOL_PID)?.tokenPriceVsQuote || 0)
+      const shroomPriceVsBNB = new BigNumber(farmsLP.find((farm) => farm.pid === SHROOM_POOL_PID)?.tokenPriceVsQuote || 0)
 
       farmsToDisplay.map((farm) => {
         if (!farm.tokenAmount || !farm.lpTotalInQuoteToken || !farm.lpTotalInQuoteToken) {
           return farm
         }
-        const mushroomRewardPerBlock = MUSHROOM_PER_BLOCK.times(farm.poolWeight)
-        const mushroomRewardPerYear = mushroomRewardPerBlock.times(BLOCKS_PER_YEAR)
+        const shroomRewardPerBlock = SHROOM_PER_BLOCK.times(farm.poolWeight)
+        const shroomRewardPerYear = shroomRewardPerBlock.times(BLOCKS_PER_YEAR)
 
-        let apy = mushroomPriceVsBNB.times(mushroomRewardPerYear).div(farm.lpTotalInQuoteToken)
+        let apy = shroomPriceVsBNB.times(shroomRewardPerYear).div(farm.lpTotalInQuoteToken)
 
         if (farm.quoteTokenSymbol === QuoteToken.BUSD) {
-          apy = mushroomPriceVsBNB.times(mushroomRewardPerYear).div(farm.lpTotalInQuoteToken).times(bnbPrice)
-        } else if (farm.quoteTokenSymbol === QuoteToken.MUSHROOM) {
-          apy = mushroomRewardPerYear.div(farm.lpTotalInQuoteToken)
+          apy = shroomPriceVsBNB.times(shroomRewardPerYear).div(farm.lpTotalInQuoteToken).times(bnbPrice)
+        } else if (farm.quoteTokenSymbol === QuoteToken.SHROOM) {
+          apy = shroomRewardPerYear.div(farm.lpTotalInQuoteToken)
         } else if (farm.dual) {
-          const mushroomApy =
-            farm && mushroomPriceVsBNB.times(mushroomRewardPerBlock).times(BLOCKS_PER_YEAR).div(farm.lpTotalInQuoteToken)
+          const shroomApy =
+            farm && shroomPriceVsBNB.times(shroomRewardPerBlock).times(BLOCKS_PER_YEAR).div(farm.lpTotalInQuoteToken)
           const dualApy =
             farm.tokenPriceVsQuote &&
             new BigNumber(farm.tokenPriceVsQuote)
@@ -67,7 +67,7 @@ const EarnAPYCard = () => {
               .times(BLOCKS_PER_YEAR)
               .div(farm.lpTotalInQuoteToken)
 
-          apy = mushroomApy && dualApy && mushroomApy.plus(dualApy)
+          apy = shroomApy && dualApy && shroomApy.plus(dualApy)
         }
 
         if (maxAPY.current < apy.toNumber()) maxAPY.current = apy.toNumber()

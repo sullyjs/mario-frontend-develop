@@ -20,11 +20,11 @@ const CardMidContent = styled(Heading).attrs({ size: 'xl' })`
   line-height: 44px;
 `
 const EarnAssetCard = () => {
-  const activeNonMushroomPools = pools.filter((pool) => !pool.isFinished && !pool.tokenName.includes('MUSHROOM'))
+  const activeNonShroomPools = pools.filter((pool) => !pool.isFinished && !pool.tokenName.includes('SHROOM'))
   // slice 3 to 1
-  const latestPools: Pool[] = orderBy(activeNonMushroomPools, ['sortOrder', 'pid'], ['desc', 'desc']).slice(0, 1)
-  // Always include MUSHROOM
-  const assets = ['MUSHROOM', ...latestPools.map((pool) => pool.tokenName)].join(', ')
+  const latestPools: Pool[] = orderBy(activeNonShroomPools, ['sortOrder', 'pid'], ['desc', 'desc']).slice(0, 1)
+  // Always include SHROOM
+  const assets = ['SHROOM', ...latestPools.map((pool) => pool.tokenName)].join(', ')
 
   return (
     <StyledFarmStakingCard>

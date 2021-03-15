@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import useWeb3 from 'hooks/useWeb3'
 import {
   getBep20Contract,
-  getMushroomContract,
+  getShroomContract,
   getToadFactoryContract,
   getToadSpecialContract,
   getMarioRabbitContract,
@@ -30,9 +30,9 @@ export const useERC20 = (address: string) => {
   return useMemo(() => getBep20Contract(address, web3), [address, web3])
 }
 
-export const useMushroom = () => {
+export const useShroom = () => {
   const web3 = useWeb3()
-  return useMemo(() => getMushroomContract(web3), [web3])
+  return useMemo(() => getShroomContract(web3), [web3])
 }
 
 export const useToadFactory = () => {

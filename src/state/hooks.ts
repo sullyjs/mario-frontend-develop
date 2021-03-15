@@ -99,8 +99,8 @@ export const usePriceBnbBusd = (): BigNumber => {
   return farm.tokenPriceVsQuote ? new BigNumber(1).div(farm.tokenPriceVsQuote) : ZERO
 }
 
-export const usePriceMushroomBusd = (): BigNumber => {
-  const pid = 1 // MUSHROOM-BNB LP
+export const usePriceShroomBusd = (): BigNumber => {
+  const pid = 1 // SHROOM-BNB LP
   const bnbPriceUSD = usePriceBnbBusd()
   const farm = useFarmFromPid(pid)
   return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO

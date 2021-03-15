@@ -6,7 +6,7 @@ import { BLOCKS_PER_YEAR } from 'config'
  * @param stakingTokenPrice Token price in the same quote currency
  * @param rewardTokenPrice Token price in the same quote currency
  * @param totalStaked Total amount of stakingToken in the pool
- * @param tokenPerBlock Amount of new mushroom allocated to the pool for each new block
+ * @param tokenPerBlock Amount of new shroom allocated to the pool for each new block
  * @returns Null if the APY is NaN or infinite.
  */
 export const getPoolApy = (

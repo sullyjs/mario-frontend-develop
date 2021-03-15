@@ -3,7 +3,7 @@ import { Modal, Flex, Text } from '@marioswap-libs/uikit'
 import { useDispatch } from 'react-redux'
 import BigNumber from 'bignumber.js'
 import useI18n from 'hooks/useI18n'
-import { useMushroom, useMarioRabbits, useProfile } from 'hooks/useContract'
+import { useShroom, useMarioRabbits, useProfile } from 'hooks/useContract'
 import useApproveConfirmTransaction from 'hooks/useApproveConfirmTransaction'
 import { fetchProfile } from 'state/profile'
 import { useToast } from 'state/hooks'
@@ -15,7 +15,7 @@ interface Props {
   tokenId: number
   account: string
   teamId: number
-  minimumMushroomRequired: BigNumber
+  minimumShroomRequired: BigNumber
   allowance: BigNumber
   onDismiss?: () => void
 }
@@ -24,7 +24,7 @@ const ConfirmProfileCreationModal: React.FC<Props> = ({
   account,
   teamId,
   tokenId,
-  minimumMushroomRequired,
+  minimumShroomRequired,
   allowance,
   onDismiss,
 }) => {
@@ -33,7 +33,7 @@ const ConfirmProfileCreationModal: React.FC<Props> = ({
   const marioRabbitsContract = useMarioRabbits()
   const dispatch = useDispatch()
   const { toastSuccess } = useToast()
-  const mushroomContract = useMushroom()
+  const shroomContract = useShroom()
 
   const {
     isApproving,
@@ -45,15 +45,15 @@ const ConfirmProfileCreationModal: React.FC<Props> = ({
   } = useApproveConfirmTransaction({
     onRequiresApproval: async () => {
       try {
-        const response = await mushroomContract.methods.allowance(account, profileContract.options.address).call()
+        const response = await shroomContract.methods.allowance(account, profileContract.options.address).call()
         const currentAllowance = new BigNumber(response)
-        return currentAllowance.gte(minimumMushroomRequired)
+        return currentAllowance.gte(minimumShroomRequired)
       } catch (error) {
         return false
       }
     },
     onApprove: () => {
-      return mushroomContract.methods.approve(profileContract.options.address, allowance.toJSON()).send({ from: account })
+      return shroomContract.methods.approve(profileContract.options.address, allowance.toJSON()).send({ from: account })
     },
     onConfirm: () => {
       return profileContract.methods
@@ -74,7 +74,7 @@ const ConfirmProfileCreationModal: React.FC<Props> = ({
       </Text>
       <Flex justifyContent="space-between" mb="16px">
         <Text>{TranslateString(999, 'Cost')}</Text>
-        <Text>{TranslateString(999, `${REGISTER_COST} MUSHROOM`, { num: REGISTER_COST })}</Text>
+        <Text>{TranslateString(999, `${REGISTER_COST} SHROOM`, { num: REGISTER_COST })}</Text>
       </Flex>
       <ApproveConfirmButtons
         isApproveDisabled={isConfirmed || isConfirming || isApproved}

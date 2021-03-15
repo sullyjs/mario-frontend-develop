@@ -1,14 +1,14 @@
-import { calculateMushroomEarnedPerThousandDollars, apyModalRoi } from 'utils/compoundApyHelpers'
+import { calculateShroomEarnedPerThousandDollars, apyModalRoi } from 'utils/compoundApyHelpers'
 
 it.each([
-  [{ numberOfDays: 1, farmApy: 365, mushroomPrice: 1 }, 10],
-  [{ numberOfDays: 7, farmApy: 20, mushroomPrice: 0.8 }, 4.8],
-  [{ numberOfDays: 40, farmApy: 212.21, mushroomPrice: 1.2 }, 217.48],
-  [{ numberOfDays: 330, farmApy: 45.12, mushroomPrice: 5 }, 100.67],
-  [{ numberOfDays: 365, farmApy: 100, mushroomPrice: 0.2 }, 8572.84],
-  [{ numberOfDays: 365, farmApy: 20, mushroomPrice: 1 }, 221.34],
-])('calculate mushroom earned with values %o', ({ numberOfDays, farmApy, mushroomPrice }, expected) => {
-  expect(calculateMushroomEarnedPerThousandDollars({ numberOfDays, farmApy, mushroomPrice })).toEqual(expected)
+  [{ numberOfDays: 1, farmApy: 365, shroomPrice: 1 }, 10],
+  [{ numberOfDays: 7, farmApy: 20, shroomPrice: 0.8 }, 4.8],
+  [{ numberOfDays: 40, farmApy: 212.21, shroomPrice: 1.2 }, 217.48],
+  [{ numberOfDays: 330, farmApy: 45.12, shroomPrice: 5 }, 100.67],
+  [{ numberOfDays: 365, farmApy: 100, shroomPrice: 0.2 }, 8572.84],
+  [{ numberOfDays: 365, farmApy: 20, shroomPrice: 1 }, 221.34],
+])('calculate shroom earned with values %o', ({ numberOfDays, farmApy, shroomPrice }, expected) => {
+  expect(calculateShroomEarnedPerThousandDollars({ numberOfDays, farmApy, shroomPrice })).toEqual(expected)
 })
 
 it.each([

@@ -3,12 +3,12 @@ import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
 import { Modal, Text, LinkExternal, Flex } from '@marioswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
-import { calculateMushroomEarnedPerThousandDollars, apyModalRoi } from 'utils/compoundApyHelpers'
+import { calculateShroomEarnedPerThousandDollars, apyModalRoi } from 'utils/compoundApyHelpers'
 
 interface ApyCalculatorModalProps {
   onDismiss?: () => void
   lpLabel?: string
-  mushroomPrice?: BigNumber
+  shroomPrice?: BigNumber
   apy?: BigNumber
   addLiquidityUrl?: string
 }
@@ -32,18 +32,18 @@ const Description = styled(Text)`
 const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
   onDismiss,
   lpLabel,
-  mushroomPrice,
+  shroomPrice,
   apy,
   addLiquidityUrl,
 }) => {
   const TranslateString = useI18n()
   const farmApy = apy.times(new BigNumber(100)).toNumber()
-  const oneThousandDollarsWorthOfMushroom = 1000 / mushroomPrice.toNumber()
+  const oneThousandDollarsWorthOfShroom = 1000 / shroomPrice.toNumber()
 
-  const mushroomEarnedPerThousand1D = calculateMushroomEarnedPerThousandDollars({ numberOfDays: 1, farmApy, mushroomPrice })
-  const mushroomEarnedPerThousand7D = calculateMushroomEarnedPerThousandDollars({ numberOfDays: 7, farmApy, mushroomPrice })
-  const mushroomEarnedPerThousand30D = calculateMushroomEarnedPerThousandDollars({ numberOfDays: 30, farmApy, mushroomPrice })
-  const mushroomEarnedPerThousand365D = calculateMushroomEarnedPerThousandDollars({ numberOfDays: 365, farmApy, mushroomPrice })
+  const shroomEarnedPerThousand1D = calculateShroomEarnedPerThousandDollars({ numberOfDays: 1, farmApy, shroomPrice })
+  const shroomEarnedPerThousand7D = calculateShroomEarnedPerThousandDollars({ numberOfDays: 7, farmApy, shroomPrice })
+  const shroomEarnedPerThousand30D = calculateShroomEarnedPerThousandDollars({ numberOfDays: 30, farmApy, shroomPrice })
+  const shroomEarnedPerThousand365D = calculateShroomEarnedPerThousandDollars({ numberOfDays: 365, farmApy, shroomPrice })
 
   return (
     <Modal title="ROI" onDismiss={onDismiss}>
@@ -60,7 +60,7 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
         </GridItem>
         <GridItem>
           <Text fontSize="12px" bold color="textSubtle" textTransform="uppercase" mb="20px">
-            {TranslateString(864, 'MUSHROOM per $1000')}
+            {TranslateString(864, 'SHROOM per $1000')}
           </Text>
         </GridItem>
         {/* 1 day row */}
@@ -69,11 +69,11 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
         </GridItem>
         <GridItem>
           <Text>
-            {apyModalRoi({ amountEarned: mushroomEarnedPerThousand1D, amountInvested: oneThousandDollarsWorthOfMushroom })}%
+            {apyModalRoi({ amountEarned: shroomEarnedPerThousand1D, amountInvested: oneThousandDollarsWorthOfShroom })}%
           </Text>
         </GridItem>
         <GridItem>
-          <Text>{mushroomEarnedPerThousand1D}</Text>
+          <Text>{shroomEarnedPerThousand1D}</Text>
         </GridItem>
         {/* 7 day row */}
         <GridItem>
@@ -81,11 +81,11 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
         </GridItem>
         <GridItem>
           <Text>
-            {apyModalRoi({ amountEarned: mushroomEarnedPerThousand7D, amountInvested: oneThousandDollarsWorthOfMushroom })}%
+            {apyModalRoi({ amountEarned: shroomEarnedPerThousand7D, amountInvested: oneThousandDollarsWorthOfShroom })}%
           </Text>
         </GridItem>
         <GridItem>
-          <Text>{mushroomEarnedPerThousand7D}</Text>
+          <Text>{shroomEarnedPerThousand7D}</Text>
         </GridItem>
         {/* 30 day row */}
         <GridItem>
@@ -93,11 +93,11 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
         </GridItem>
         <GridItem>
           <Text>
-            {apyModalRoi({ amountEarned: mushroomEarnedPerThousand30D, amountInvested: oneThousandDollarsWorthOfMushroom })}%
+            {apyModalRoi({ amountEarned: shroomEarnedPerThousand30D, amountInvested: oneThousandDollarsWorthOfShroom })}%
           </Text>
         </GridItem>
         <GridItem>
-          <Text>{mushroomEarnedPerThousand30D}</Text>
+          <Text>{shroomEarnedPerThousand30D}</Text>
         </GridItem>
         {/* 365 day / APY row */}
         <GridItem>
@@ -105,11 +105,11 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
         </GridItem>
         <GridItem>
           <Text>
-            {apyModalRoi({ amountEarned: mushroomEarnedPerThousand365D, amountInvested: oneThousandDollarsWorthOfMushroom })}%
+            {apyModalRoi({ amountEarned: shroomEarnedPerThousand365D, amountInvested: oneThousandDollarsWorthOfShroom })}%
           </Text>
         </GridItem>
         <GridItem>
-          <Text>{mushroomEarnedPerThousand365D}</Text>
+          <Text>{shroomEarnedPerThousand365D}</Text>
         </GridItem>
       </Grid>
       <Description fontSize="12px" color="textSubtle">

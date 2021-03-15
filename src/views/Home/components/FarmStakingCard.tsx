@@ -6,8 +6,8 @@ import useI18n from 'hooks/useI18n'
 import { useAllHarvest } from 'hooks/useHarvest'
 import useFarmsWithBalance from 'hooks/useFarmsWithBalance'
 import UnlockButton from 'components/UnlockButton'
-import MushroomHarvestBalance from './MushroomHarvestBalance'
-import MushroomWalletBalance from './MushroomWalletBalance'
+import ShroomHarvestBalance from './ShroomHarvestBalance'
+import ShroomWalletBalance from './ShroomWalletBalance'
 
 const StyledFarmStakingCard = styled(Card)`
   background-image: url('/images/mario-card-bg2.png');
@@ -58,16 +58,16 @@ const FarmedStakingCard = () => {
     <StyledFarmStakingCard>
       <CardBody>
         <Heading size="xl" mb="24px">
-          {TranslateString(542, 'Farm & Stake Mushrooms to Harvest')}
+          {TranslateString(542, 'Farm & Stake Shrooms to Harvest')}
         </Heading>
-        <CardImage src="/images/mario.png" alt="mushroom logo" width={64} height={64} />
+        <CardImage src="/images/mario.png" alt="shroom logo" width={64} height={64} />
         <Block>
-          <Label>{TranslateString(544, 'MUSHROOM to Harvest')}:</Label>
-          <MushroomHarvestBalance />
+          <Label>{TranslateString(544, 'SHROOM to Harvest')}:</Label>
+          <ShroomHarvestBalance />
         </Block>
         <Block>
-          <Label>{TranslateString(546, 'MUSHROOM in Wallet')}:</Label>
-          <MushroomWalletBalance />
+          <Label>{TranslateString(546, 'SHROOM in Wallet')}:</Label>
+          <ShroomWalletBalance />
         </Block>
         <Actions>
           {account ? (
@@ -78,7 +78,7 @@ const FarmedStakingCard = () => {
               width="100%"
             >
               {pendingTx
-                ? TranslateString(548, 'Collecting MUSHROOM')
+                ? TranslateString(548, 'Collecting SHROOM')
                 : TranslateString(532, `Harvest all (${balancesWithValue.length})`)}
             </Button>
           ) : (

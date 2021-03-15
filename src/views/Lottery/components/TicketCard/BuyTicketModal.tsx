@@ -63,7 +63,7 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
     }
   }, [maxTickets])
 
-  const mushroomCosts = (amount: string): number => {
+  const shroomCosts = (amount: string): number => {
     return +amount * LOTTERY_TICKET_PRICE
   }
   return (
@@ -74,19 +74,19 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
         onChange={handleChange}
         max={fullBalance}
         symbol="TICKET"
-        availableSymbol="MUSHROOM"
+        availableSymbol="SHROOM"
       />
       <div>
-        <Tips>{TranslateString(999, `1 Ticket = ${LOTTERY_TICKET_PRICE} MUSHROOM`, { num: LOTTERY_TICKET_PRICE })}</Tips>
+        <Tips>{TranslateString(999, `1 Ticket = ${LOTTERY_TICKET_PRICE} SHROOM`, { num: LOTTERY_TICKET_PRICE })}</Tips>
       </div>
       <div>
         <Announce>
           {TranslateString(
             478,
-            'Ticket purchases are final. Your MUSHROOM cannot be returned to you after buying tickets.',
+            'Ticket purchases are final. Your SHROOM cannot be returned to you after buying tickets.',
           )}
         </Announce>
-        <Final>{TranslateString(460, `You will spend: ${mushroomCosts(val)} MUSHROOM`)}</Final>
+        <Final>{TranslateString(460, `You will spend: ${shroomCosts(val)} SHROOM`)}</Final>
       </div>
       <ModalActions>
         <Button width="100%" variant="secondary" onClick={onDismiss}>

@@ -48,12 +48,12 @@ const Ifo = () => {
           <Title as="h2">{TranslateString(592, 'How to take part')}</Title>
           <Heading mb="16px">{TranslateString(594, 'Before Sale')}:</Heading>
           <List>
-            <li>{TranslateString(596, 'Buy MUSHROOM and BNB tokens')}</li>
-            <li>{TranslateString(598, 'Get MUSHROOM-BNB LP tokens by adding MUSHROOM and BNB liquidity')}</li>
+            <li>{TranslateString(596, 'Buy SHROOM and BNB tokens')}</li>
+            <li>{TranslateString(598, 'Get SHROOM-BNB LP tokens by adding SHROOM and BNB liquidity')}</li>
           </List>
           <Flex mb="16px">
             <LinkExternal href="http://localhost:3002/#/swap" mr="16px">
-              {TranslateString(1060, 'Buy MUSHROOM')}
+              {TranslateString(1060, 'Buy SHROOM')}
             </LinkExternal>
             <LinkExternal href="http://localhost:3002/#/add/ETH/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82">
               {TranslateString(1062, 'Get LP tokens')}
@@ -61,7 +61,7 @@ const Ifo = () => {
           </Flex>
           <Heading mb="16px">{TranslateString(600, 'During Sale')}:</Heading>
           <List>
-            <li>{TranslateString(602, 'While the sale is live, commit your MUSHROOM-LP tokens to buy the IFO tokens')}</li>
+            <li>{TranslateString(602, 'While the sale is live, commit your SHROOM-LP tokens to buy the IFO tokens')}</li>
           </List>
           <Heading mb="16px">{TranslateString(604, 'After Sale')}:</Heading>
           <List>

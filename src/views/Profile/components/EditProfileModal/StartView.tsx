@@ -5,11 +5,11 @@ import { useWeb3React } from '@web3-react/core'
 import { Button, Flex, Text, InjectedModalProps } from '@marioswap-libs/uikit'
 import { getFullDisplayBalance } from 'utils/formatBalance'
 import { getMarioProfileAddress } from 'utils/addressHelpers'
-import { useMushroom } from 'hooks/useContract'
+import { useShroom } from 'hooks/useContract'
 import useI18n from 'hooks/useI18n'
 import { useProfile } from 'state/hooks'
 import useGetProfileCosts from 'views/Profile/hooks/useGetProfileCosts'
-import useHasMushroomBalance from 'hooks/useHasMushroomBalance'
+import useHasShroomBalance from 'hooks/useHasShroomBalance'
 import { UseEditProfileResponse } from './reducer'
 import ProfileAvatar from '../ProfileAvatar'
 
@@ -33,20 +33,20 @@ const DangerOutline = styled(Button).attrs({ variant: 'secondary' })`
 const StartPage: React.FC<StartPageProps> = ({ goToApprove, goToChange, goToRemove, onDismiss }) => {
   const [needsApproval, setNeedsApproval] = useState(null)
   const { profile } = useProfile()
-  const { numberMushroomToUpdate, numberMushroomToReactivate } = useGetProfileCosts()
-  const hasMinimumMushroomRequired = useHasMushroomBalance(profile.isActive ? numberMushroomToUpdate : numberMushroomToReactivate)
+  const { numberShroomToUpdate, numberShroomToReactivate } = useGetProfileCosts()
+  const hasMinimumShroomRequired = useHasShroomBalance(profile.isActive ? numberShroomToUpdate : numberShroomToReactivate)
   const TranslateString = useI18n()
   const { account } = useWeb3React()
-  const mushroomContract = useMushroom()
-  const cost = profile.isActive ? numberMushroomToUpdate : numberMushroomToReactivate
+  const shroomContract = useShroom()
+  const cost = profile.isActive ? numberShroomToUpdate : numberShroomToReactivate
 
   /**
-   * Check if the wallet has the required MUSHROOM allowance to change their profile pic or reactivate
+   * Check if the wallet has the required SHROOM allowance to change their profile pic or reactivate
    * If they don't, we send them to the approval screen first
    */
   useEffect(() => {
     const checkApprovalStatus = async () => {
-      const response = await mushroomContract.methods.allowance(account, getMarioProfileAddress()).call()
+      const response = await shroomContract.methods.allowance(account, getMarioProfileAddress()).call()
       const currentAllowance = new BigNumber(response)
       setNeedsApproval(currentAllowance.lt(cost))
     }
@@ -54,7 +54,7 @@ const StartPage: React.FC<StartPageProps> = ({ goToApprove, goToChange, goToRemo
     if (account) {
       checkApprovalStatus()
     }
-  }, [account, cost, setNeedsApproval, mushroomContract])
+  }, [account, cost, setNeedsApproval, shroomContract])
 
   if (!profile) {
     return null
@@ -65,8 +65,8 @@ const StartPage: React.FC<StartPageProps> = ({ goToApprove, goToChange, goToRemo
       <ProfileAvatar profile={profile} />
       <Flex alignItems="center" style={{ height: '48px' }} justifyContent="center">
         <Text as="p" color="failure">
-          {!hasMinimumMushroomRequired &&
-            TranslateString(999, `${getFullDisplayBalance(numberMushroomToUpdate)} MUSHROOM required to change profile pic`)}
+          {!hasMinimumShroomRequired &&
+            TranslateString(999, `${getFullDisplayBalance(numberShroomToUpdate)} SHROOM required to change profile pic`)}
         </Text>
       </Flex>
       {profile.isActive ? (
@@ -75,7 +75,7 @@ const StartPage: React.FC<StartPageProps> = ({ goToApprove, goToChange, goToRemo
             width="100%"
             mb="8px"
             onClick={needsApproval === true ? goToApprove : goToChange}
-            disabled={!hasMinimumMushroomRequired || needsApproval === null}
+            disabled={!hasMinimumShroomRequired || needsApproval === null}
           >
             {TranslateString(999, 'Change Profile Pic')}
           </Button>
@@ -88,7 +88,7 @@ const StartPage: React.FC<StartPageProps> = ({ goToApprove, goToChange, goToRemo
           width="100%"
           mb="8px"
           onClick={needsApproval === true ? goToApprove : goToChange}
-          disabled={!hasMinimumMushroomRequired || needsApproval === null}
+          disabled={!hasMinimumShroomRequired || needsApproval === null}
         >
           {TranslateString(999, 'Reactivate Profile')}
         </Button>

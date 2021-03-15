@@ -87,21 +87,21 @@ const ExpandingWrapper = styled.div<{ expanded: boolean }>`
 interface FarmCardProps {
   farm: FarmWithStakedValue
   removed: boolean
-  mushroomPrice?: BigNumber
+  shroomPrice?: BigNumber
   bnbPrice?: BigNumber
   ethPrice?: BigNumber
   provider?: ProviderType
   account?: string
 }
 
-const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, mushroomPrice, bnbPrice, ethPrice, account }) => {
+const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, shroomPrice, bnbPrice, ethPrice, account }) => {
   const TranslateString = useI18n()
 
   const [showExpandableSection, setShowExpandableSection] = useState(false)
 
   const isCommunityFarm = communityFarms.includes(farm.tokenSymbol)
-  // We assume the token name is coin pair + lp e.g. MUSHROOM-BNB LP, LINK-BNB LP,
-  // NAR-MUSHROOM LP. The images should be mushroom-bnb.svg, link-bnb.svg, nar-mushroom.svg
+  // We assume the token name is coin pair + lp e.g. SHROOM-BNB LP, LINK-BNB LP,
+  // NAR-SHROOM LP. The images should be shroom-bnb.svg, link-bnb.svg, nar-shroom.svg
   const farmImage = farm.lpSymbol.split(' ')[0].toLocaleLowerCase()
 
   const totalValue: BigNumber = useMemo(() => {
@@ -111,21 +111,21 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, mushroomPrice, bnbPr
     if (farm.quoteTokenSymbol === QuoteToken.BNB) {
       return bnbPrice.times(farm.lpTotalInQuoteToken)
     }
-    if (farm.quoteTokenSymbol === QuoteToken.MUSHROOM) {
-      return mushroomPrice.times(farm.lpTotalInQuoteToken)
+    if (farm.quoteTokenSymbol === QuoteToken.SHROOM) {
+      return shroomPrice.times(farm.lpTotalInQuoteToken)
     }
     if (farm.quoteTokenSymbol === QuoteToken.ETH) {
       return ethPrice.times(farm.lpTotalInQuoteToken)
     }
     return farm.lpTotalInQuoteToken
-  }, [bnbPrice, mushroomPrice, ethPrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol])
+  }, [bnbPrice, shroomPrice, ethPrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol])
 
   const totalValueFormated = totalValue
     ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
     : '-'
 
-  const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PANMUSHROOM', '')
-  const earnLabel = farm.dual ? farm.dual.earnLabel : 'MUSHROOM'
+  const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PANSHROOM', '')
+  const earnLabel = farm.dual ? farm.dual.earnLabel : 'SHROOM'
   const farmAPY = farm.apy && farm.apy.times(new BigNumber(100)).toNumber().toLocaleString('en-US').slice(0, -1)
 
   const { quoteTokenAdresses, quoteTokenSymbol, tokenAddresses } = farm
@@ -134,7 +134,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, mushroomPrice, bnbPr
 
   return (
     <FCard>
-      {farm.tokenSymbol === 'MUSHROOM' && <StyledCardAccent />}
+      {farm.tokenSymbol === 'SHROOM' && <StyledCardAccent />}
       <CardHeading
         lpLabel={lpLabel}
         multiplier={farm.multiplier}
@@ -148,7 +148,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, mushroomPrice, bnbPr
           <Text bold style={{ display: 'flex', alignItems: 'center' }}>
             {farm.apy ? (
               <>
-                <ApyButton lpLabel={lpLabel} addLiquidityUrl={addLiquidityUrl} mushroomPrice={mushroomPrice} apy={farm.apy} />
+                <ApyButton lpLabel={lpLabel} addLiquidityUrl={addLiquidityUrl} shroomPrice={shroomPrice} apy={farm.apy} />
                 {farmAPY}%
               </>
             ) : (

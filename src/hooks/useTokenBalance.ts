@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import BigNumber from 'bignumber.js'
 import { useWeb3React } from '@web3-react/core'
-import { getBep20Contract, getMushroomContract } from 'utils/contractHelpers'
+import { getBep20Contract, getShroomContract } from 'utils/contractHelpers'
 import useWeb3 from './useWeb3'
 import useRefresh from './useRefresh'
 
@@ -32,8 +32,8 @@ export const useTotalSupply = () => {
 
   useEffect(() => {
     async function fetchTotalSupply() {
-      const mushroomContract = getMushroomContract()
-      const supply = await mushroomContract.methods.totalSupply().call()
+      const shroomContract = getShroomContract()
+      const supply = await shroomContract.methods.totalSupply().call()
       setTotalSupply(new BigNumber(supply))
     }
 

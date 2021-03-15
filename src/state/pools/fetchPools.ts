@@ -1,6 +1,6 @@
 import poolsConfig from 'config/constants/pools'
 import sousChefABI from 'config/abi/sousChef.json'
-import mushroomABI from 'config/abi/mushroom.json'
+import shroomABI from 'config/abi/shroom.json'
 import wbnbABI from 'config/abi/weth.json'
 import { QuoteToken } from 'config/constants/types'
 import multicall from 'utils/multicall'
@@ -25,11 +25,11 @@ export const fetchPoolsBlockLimits = async () => {
   const starts = await multicall(sousChefABI, callsStartBlock)
   const ends = await multicall(sousChefABI, callsEndBlock)
 
-  return poolsWithEnd.map((mushroomPoolConfig, index) => {
+  return poolsWithEnd.map((shroomPoolConfig, index) => {
     const startBlock = starts[index]
     const endBlock = ends[index]
     return {
-      sousId: mushroomPoolConfig.sousId,
+      sousId: shroomPoolConfig.sousId,
       startBlock: new BigNumber(startBlock).toJSON(),
       endBlock: new BigNumber(endBlock).toJSON(),
     }
@@ -56,7 +56,7 @@ export const fetchPoolsTotalStatking = async () => {
     }
   })
 
-  const nonBnbPoolsTotalStaked = await multicall(mushroomABI, callsNonBnbPools)
+  const nonBnbPoolsTotalStaked = await multicall(shroomABI, callsNonBnbPools)
   const bnbPoolsTotalStaked = await multicall(wbnbABI, callsBnbPools)
 
   return [

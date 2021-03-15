@@ -6,21 +6,21 @@ import { FarmWithStakedValue } from 'views/Farms/components/FarmCard/FarmCard'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useHarvest } from 'hooks/useHarvest'
 import useI18n from 'hooks/useI18n'
-import { usePriceMushroomBusd } from 'state/hooks'
+import { usePriceShroomBusd } from 'state/hooks'
 import { useCountUp } from 'react-countup'
 
 import { ActionContainer, ActionTitles, Title, Subtle, ActionContent, Earned, Staked } from './styles'
 
 const HarvestAction: React.FunctionComponent<FarmWithStakedValue> = ({ pid, userData }) => {
   const earningsBigNumber = userData ? new BigNumber(userData.earnings) : null
-  const mushroomPrice = usePriceMushroomBusd()
+  const shroomPrice = usePriceShroomBusd()
   let earnings = null
   let earningsBusd = 0
   let displayBalance = '?'
 
   if (earningsBigNumber) {
     earnings = getBalanceNumber(earningsBigNumber)
-    earningsBusd = new BigNumber(earnings).multipliedBy(mushroomPrice).toNumber()
+    earningsBusd = new BigNumber(earnings).multipliedBy(shroomPrice).toNumber()
     displayBalance = earnings.toLocaleString()
   }
 
@@ -45,7 +45,7 @@ const HarvestAction: React.FunctionComponent<FarmWithStakedValue> = ({ pid, user
   return (
     <ActionContainer>
       <ActionTitles>
-        <Title>MUSHROOM </Title>
+        <Title>SHROOM </Title>
         <Subtle>EARNED</Subtle>
       </ActionTitles>
       <ActionContent>

@@ -14,7 +14,7 @@ export interface AprProps {
   quoteTokenAdresses: Address
   quoteTokenSymbol: QuoteToken
   tokenAddresses: Address
-  mushroomPrice: BigNumber
+  shroomPrice: BigNumber
   originalValue: BigNumber
   hideButton?: boolean
 }
@@ -47,7 +47,7 @@ const Apr: React.FC<AprProps> = ({
   quoteTokenAdresses,
   quoteTokenSymbol,
   tokenAddresses,
-  mushroomPrice,
+  shroomPrice,
   originalValue,
   hideButton = false,
 }) => {
@@ -59,7 +59,7 @@ const Apr: React.FC<AprProps> = ({
     <Container>
       <AprWrapper>{displayApr}</AprWrapper>
       {!hideButton && (
-        <ApyButton lpLabel={lpLabel} mushroomPrice={mushroomPrice} apy={originalValue} addLiquidityUrl={addLiquidityUrl} />
+        <ApyButton lpLabel={lpLabel} shroomPrice={shroomPrice} apy={originalValue} addLiquidityUrl={addLiquidityUrl} />
       )}
     </Container>
   )

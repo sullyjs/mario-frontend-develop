@@ -30,7 +30,7 @@ const Header: React.FC = () => {
         {TranslateString(772, 'Show off your stats and collectibles with your unique profile')}
       </Heading>
       <Text color="textSubtle" mb="24px">
-        {TranslateString(999, 'Total cost: 1.5 MUSHROOM')}
+        {TranslateString(999, 'Total cost: 1.5 SHROOM')}
       </Text>
       <Breadcrumbs>
         {steps.map(({ translationId, label }, index) => {

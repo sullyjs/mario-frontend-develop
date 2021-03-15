@@ -1,13 +1,13 @@
-import { usePriceMushroomBusd } from 'state/hooks'
+import { usePriceShroomBusd } from 'state/hooks'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalRewards } from './useTickets'
 
 const useLotteryTotalPrizesUsd = () => {
   const totalRewards = useTotalRewards()
-  const totalMushroom = getBalanceNumber(totalRewards)
-  const mushroomPriceBusd = usePriceMushroomBusd()
+  const totalShroom = getBalanceNumber(totalRewards)
+  const shroomPriceBusd = usePriceShroomBusd()
 
-  return totalMushroom * mushroomPriceBusd.toNumber()
+  return totalShroom * shroomPriceBusd.toNumber()
 }
 
 export default useLotteryTotalPrizesUsd

@@ -5,7 +5,7 @@ import useI18n from 'hooks/useI18n'
 import Page from 'components/layout/Page'
 import FarmStakingCard from 'views/Home/components/FarmStakingCard'
 import LotteryCard from 'views/Home/components/LotteryCard'
-import MushroomStats from 'views/Home/components/MushroomStats'
+import ShroomStats from 'views/Home/components/ShroomStats'
 import TotalValueLockedCard from 'views/Home/components/TotalValueLockedCard'
 import EarnAPYCard from 'views/Home/components/EarnAPYCard'
 import EarnAssetCard from 'views/Home/components/EarnAssetCard'
@@ -112,7 +112,7 @@ const Home: React.FC = () => {
           <WinCard />
         </CTACards>
         <Cards>
-          <MushroomStats />
+          <ShroomStats />
           <TotalValueLockedCard />
         </Cards>
       </div>

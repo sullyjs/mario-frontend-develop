@@ -14,7 +14,7 @@ const initialState: State = {
   teamId: null,
   tokenId: null,
   userName: '',
-  minimumMushroomRequired: new BigNumber(totalCost).multipliedBy(new BigNumber(10).pow(18)),
+  minimumShroomRequired: new BigNumber(totalCost).multipliedBy(new BigNumber(10).pow(18)),
   allowance: new BigNumber(allowance).multipliedBy(new BigNumber(10).pow(18)),
 }
 

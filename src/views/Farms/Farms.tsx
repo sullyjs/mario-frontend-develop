@@ -5,10 +5,10 @@ import BigNumber from 'bignumber.js'
 import { useWeb3React } from '@web3-react/core'
 import { Image, Heading, RowType, Toggle, Text } from '@marioswap-libs/uikit'
 import styled from 'styled-components'
-import { BLOCKS_PER_YEAR, MUSHROOM_PER_BLOCK, MUSHROOM_POOL_PID } from 'config'
+import { BLOCKS_PER_YEAR, SHROOM_PER_BLOCK, SHROOM_POOL_PID } from 'config'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
-import { useFarms, usePriceBnbBusd, usePriceMushroomBusd, usePriceEthBusd } from 'state/hooks'
+import { useFarms, usePriceBnbBusd, usePriceShroomBusd, usePriceEthBusd } from 'state/hooks'
 import useRefresh from 'hooks/useRefresh'
 import { fetchFarmUserDataAsync } from 'state/actions'
 import { QuoteToken } from 'config/constants/types'
@@ -114,7 +114,7 @@ const Farms: React.FC = () => {
   const { pathname } = useLocation()
   const TranslateString = useI18n()
   const farmsLP = useFarms()
-  const mushroomPrice = usePriceMushroomBusd()
+  const shroomPrice = usePriceShroomBusd()
   const bnbPrice = usePriceBnbBusd()
   const [query, setQuery] = useState('')
   const [viewMode, setViewMode] = useState(ViewMode.CARD)
@@ -132,7 +132,7 @@ const Farms: React.FC = () => {
 
   const [stackedOnly, setStackedOnly] = useState(false)
 
-  const activeFarms = farmsLP.filter((farm) => farm.pid !== 0 && farm.multiplier !== '0X')
+  const activeFarms = farmsLP.filter((farm) => farm.pid !== 0 && farm.pid !== 14 && farm.pid !== 2 && farm.multiplier !== '0X')
   const inactiveFarms = farmsLP.filter((farm) => farm.pid !== 0 && farm.multiplier === '0X')
 
   const stackedOnlyFarms = activeFarms.filter(
@@ -159,26 +159,26 @@ const Farms: React.FC = () => {
   // to retrieve assets prices against USD
   const farmsList = useCallback(
     (farmsToDisplay): FarmWithStakedValue[] => {
-      const mushroomPriceVsBNB = new BigNumber(farmsLP.find((farm) => farm.pid === MUSHROOM_POOL_PID)?.tokenPriceVsQuote || 0)
+      const shroomPriceVsBNB = new BigNumber(farmsLP.find((farm) => farm.pid === SHROOM_POOL_PID)?.tokenPriceVsQuote || 0)
       let farmsToDisplayWithAPY: FarmWithStakedValue[] = farmsToDisplay.map((farm) => {
         if (!farm.tokenAmount || !farm.lpTotalInQuoteToken) {
           return farm
         }
-        const mushroomRewardPerBlock = MUSHROOM_PER_BLOCK.times(farm.poolWeight)
-        const mushroomRewardPerYear = mushroomRewardPerBlock.times(BLOCKS_PER_YEAR)
+        const shroomRewardPerBlock = SHROOM_PER_BLOCK.times(farm.poolWeight)
+        const shroomRewardPerYear = shroomRewardPerBlock.times(BLOCKS_PER_YEAR)
 
-        // mushroomPriceInQuote * mushroomRewardPerYear / lpTotalInQuoteToken
-        let apy = mushroomPriceVsBNB.times(mushroomRewardPerYear).div(farm.lpTotalInQuoteToken)
+        // shroomPriceInQuote * shroomRewardPerYear / lpTotalInQuoteToken
+        let apy = shroomPriceVsBNB.times(shroomRewardPerYear).div(farm.lpTotalInQuoteToken)
 
         if (farm.quoteTokenSymbol === QuoteToken.BUSD || farm.quoteTokenSymbol === QuoteToken.UST) {
-          apy = mushroomPriceVsBNB.times(mushroomRewardPerYear).div(farm.lpTotalInQuoteToken).times(bnbPrice)
+          apy = shroomPriceVsBNB.times(shroomRewardPerYear).div(farm.lpTotalInQuoteToken).times(bnbPrice)
         } else if (farm.quoteTokenSymbol === QuoteToken.ETH) {
-          apy = mushroomPrice.div(ethPriceUsd).times(mushroomRewardPerYear).div(farm.lpTotalInQuoteToken)
-        } else if (farm.quoteTokenSymbol === QuoteToken.MUSHROOM) {
-          apy = mushroomRewardPerYear.div(farm.lpTotalInQuoteToken)
+          apy = shroomPrice.div(ethPriceUsd).times(shroomRewardPerYear).div(farm.lpTotalInQuoteToken)
+        } else if (farm.quoteTokenSymbol === QuoteToken.SHROOM) {
+          apy = shroomRewardPerYear.div(farm.lpTotalInQuoteToken)
         } else if (farm.dual) {
-          const mushroomApy =
-            farm && mushroomPriceVsBNB.times(mushroomRewardPerBlock).times(BLOCKS_PER_YEAR).div(farm.lpTotalInQuoteToken)
+          const shroomApy =
+            farm && shroomPriceVsBNB.times(shroomRewardPerBlock).times(BLOCKS_PER_YEAR).div(farm.lpTotalInQuoteToken)
           const dualApy =
             farm.tokenPriceVsQuote &&
             new BigNumber(farm.tokenPriceVsQuote)
@@ -186,7 +186,7 @@ const Farms: React.FC = () => {
               .times(BLOCKS_PER_YEAR)
               .div(farm.lpTotalInQuoteToken)
 
-          apy = mushroomApy && dualApy && mushroomApy.plus(dualApy)
+          apy = shroomApy && dualApy && shroomApy.plus(dualApy)
         }
 
         let liquidity = farm.lpTotalInQuoteToken
@@ -197,8 +197,8 @@ const Farms: React.FC = () => {
         if (farm.quoteTokenSymbol === QuoteToken.BNB) {
           liquidity = bnbPrice.times(farm.lpTotalInQuoteToken)
         }
-        if (farm.quoteTokenSymbol === QuoteToken.MUSHROOM) {
-          liquidity = mushroomPrice.times(farm.lpTotalInQuoteToken)
+        if (farm.quoteTokenSymbol === QuoteToken.SHROOM) {
+          liquidity = shroomPrice.times(farm.lpTotalInQuoteToken)
         }
 
         if (farm.quoteTokenSymbol === QuoteToken.ETH) {
@@ -220,7 +220,7 @@ const Farms: React.FC = () => {
       }
       return farmsToDisplayWithAPY
     },
-    [bnbPrice, farmsLP, query, mushroomPrice, ethPriceUsd],
+    [bnbPrice, farmsLP, query, shroomPrice, ethPriceUsd],
   )
 
   const handleChangeQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -239,7 +239,7 @@ const Farms: React.FC = () => {
 
   const rowData = farmsStaked.map((farm) => {
     const { quoteTokenAdresses, quoteTokenSymbol, tokenAddresses } = farm
-    const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PANMUSHROOM', '')
+    const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PANSHROOM', '')
 
     const row: RowProps = {
       apr: {
@@ -251,7 +251,7 @@ const Farms: React.FC = () => {
         quoteTokenAdresses,
         quoteTokenSymbol,
         tokenAddresses,
-        mushroomPrice,
+        shroomPrice,
         originalValue: farm.apy,
       },
       farm: {
@@ -314,7 +314,7 @@ const Farms: React.FC = () => {
                 key={farm.pid}
                 farm={farm}
                 bnbPrice={bnbPrice}
-                mushroomPrice={mushroomPrice}
+                shroomPrice={shroomPrice}
                 ethPrice={ethPriceUsd}
                 account={account}
                 removed={false}
@@ -327,7 +327,7 @@ const Farms: React.FC = () => {
                 key={farm.pid}
                 farm={farm}
                 bnbPrice={bnbPrice}
-                mushroomPrice={mushroomPrice}
+                shroomPrice={shroomPrice}
                 ethPrice={ethPriceUsd}
                 account={account}
                 removed

@@ -13,7 +13,7 @@ export interface Ifo {
   launchTime: string
   saleAmount: string
   raiseAmount: string
-  mushroomToBurn: string
+  shroomToBurn: string
   projectSiteUrl: string
   currency: string
   currencyAddress: string
@@ -25,7 +25,7 @@ export interface Ifo {
 
 export enum QuoteToken {
   'BNB' = 'BNB',
-  'MUSHROOM' = 'MUSHROOM',
+  'SHROOM' = 'SHROOM',
   'SYRUP' = 'SYRUP',
   'BUSD' = 'BUSD',
   'TWT' = 'TWT',

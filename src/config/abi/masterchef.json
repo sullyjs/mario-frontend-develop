@@ -2,8 +2,8 @@
   {
     "inputs": [
       {
-        "internalType": "contract MushroomToken",
-        "name": "_mushroom",
+        "internalType": "contract ShroomToken",
+        "name": "_shroom",
         "type": "address"
       },
       {
@@ -18,7 +18,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "_mushroomPerBlock",
+        "name": "_shroomPerBlock",
         "type": "uint256"
       },
       {
@@ -162,10 +162,10 @@
   },
   {
     "inputs": [],
-    "name": "mushroom",
+    "name": "shroom",
     "outputs": [
       {
-        "internalType": "contract MushroomToken",
+        "internalType": "contract ShroomToken",
         "name": "",
         "type": "address"
       }
@@ -175,7 +175,7 @@
   },
   {
     "inputs": [],
-    "name": "mushroomPerBlock",
+    "name": "shroomPerBlock",
     "outputs": [
       {
         "internalType": "uint256",
@@ -352,7 +352,7 @@
         "type": "address"
       }
     ],
-    "name": "pendingMushroom",
+    "name": "pendingShroom",
     "outputs": [
       {
         "internalType": "uint256",
@@ -390,7 +390,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "accMushroomPerShare",
+        "name": "accShroomPerShare",
         "type": "uint256"
       }
     ],

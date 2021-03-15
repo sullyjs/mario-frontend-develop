@@ -44,7 +44,7 @@ const ClaimGift: React.FC<ClaimGiftProps> = ({ onSuccess, onDismiss }) => {
 
   const handleClick = () => {
     claimRefundContract.methods
-      .getMushroomBack()
+      .getShroomBack()
       .send({ from: account })
       .on('sending', () => {
         setIsConfirming(true)
@@ -71,7 +71,7 @@ const ClaimGift: React.FC<ClaimGiftProps> = ({ onSuccess, onDismiss }) => {
           )}
         </Text>
         <Text as="p">
-          {TranslateString(999, "To make it up to you, we'll refund you the full 4 MUSHROOM it cost to make your toad.")}
+          {TranslateString(999, "To make it up to you, we'll refund you the full 4 SHROOM it cost to make your toad.")}
         </Text>
         <Text as="p" mb="8px">
           {TranslateString(
@@ -91,7 +91,7 @@ const ClaimGift: React.FC<ClaimGiftProps> = ({ onSuccess, onDismiss }) => {
           onClick={handleClick}
           disabled={!canClaim}
         >
-          {TranslateString(999, 'Claim Your MUSHROOM')}
+          {TranslateString(999, 'Claim Your SHROOM')}
         </Button>
       </div>
     </Modal>

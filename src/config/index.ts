@@ -5,10 +5,10 @@ BigNumber.config({
   DECIMAL_PLACES: 80,
 })
 
-export const MUSHROOM_PER_BLOCK = new BigNumber(40)
+export const SHROOM_PER_BLOCK = new BigNumber(40)
 export const BLOCKS_PER_YEAR = new BigNumber(10512000)
 export const BSC_BLOCK_TIME = 3
-export const MUSHROOM_POOL_PID = 1
+export const SHROOM_POOL_PID = 1
 export const BASE_EXCHANGE_URL = 'http://localhost:3002'
 export const BASE_ADD_LIQUIDITY_URL = `${BASE_EXCHANGE_URL}/#/add`
 export const BASE_LIQUIDITY_POOL_URL = `${BASE_EXCHANGE_URL}/#/pool`

@@ -11,7 +11,7 @@ import {
   getMarioRabbitsAddress,
   getToadFactoryAddress,
   getToadSpecialAddress,
-  getMushroomAddress,
+  getShroomAddress,
   getLotteryAddress,
   getLotteryTicketAddress,
   getMasterChefAddress,
@@ -25,7 +25,7 @@ import marioRabbitsAbi from 'config/abi/marioRabbits.json'
 import toadFactoryAbi from 'config/abi/toadFactory.json'
 import toadSpecialAbi from 'config/abi/toadSpecial.json'
 import bep20Abi from 'config/abi/erc20.json'
-import mushroomAbi from 'config/abi/mushroom.json'
+import shroomAbi from 'config/abi/shroom.json'
 import ifoAbi from 'config/abi/ifo.json'
 import pointCenterIfo from 'config/abi/pointCenterIfo.json'
 import lotteryAbi from 'config/abi/lottery.json'
@@ -54,8 +54,8 @@ export const getSouschefContract = (id: number, web3?: Web3) => {
 export const getPointCenterIfoContract = (web3?: Web3) => {
   return getContract(pointCenterIfo, getPointCenterIfoAddress(), web3)
 }
-export const getMushroomContract = (web3?: Web3) => {
-  return getContract(mushroomAbi, getMushroomAddress(), web3)
+export const getShroomContract = (web3?: Web3) => {
+  return getContract(shroomAbi, getShroomAddress(), web3)
 }
 export const getProfileContract = (web3?: Web3) => {
   return getContract(profileABI, getMarioProfileAddress(), web3)

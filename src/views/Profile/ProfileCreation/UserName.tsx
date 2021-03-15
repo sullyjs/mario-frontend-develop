@@ -21,7 +21,7 @@ import { useWeb3React } from '@web3-react/core'
 import { useToast } from 'state/hooks'
 import useWeb3 from 'hooks/useWeb3'
 import useI18n from 'hooks/useI18n'
-import useHasMushroomBalance from 'hooks/useHasMushroomBalance'
+import useHasShroomBalance from 'hooks/useHasShroomBalance'
 import debounce from 'lodash/debounce'
 import ConfirmProfileCreationModal from '../components/ConfirmProfileCreationModal'
 import useProfileCreation from './contexts/hook'
@@ -34,7 +34,7 @@ enum ExistingUserState {
 }
 
 const profileApiUrl = process.env.REACT_APP_API_PROFILE
-const minimumMushroomToRegister = new BigNumber(REGISTER_COST).multipliedBy(new BigNumber(10).pow(18))
+const minimumShroomToRegister = new BigNumber(REGISTER_COST).multipliedBy(new BigNumber(10).pow(18))
 
 const InputWrap = styled.div`
   position: relative;
@@ -58,7 +58,7 @@ const Indicator = styled(Flex)`
 
 const UserName: React.FC = () => {
   const [isAcknowledged, setIsAcknoledged] = useState(false)
-  const { teamId, tokenId, userName, actions, minimumMushroomRequired, allowance } = useProfileCreation()
+  const { teamId, tokenId, userName, actions, minimumShroomRequired, allowance } = useProfileCreation()
   const TranslateString = useI18n()
   const { account, library } = useWeb3React()
   const { toastError } = useToast()
@@ -67,14 +67,14 @@ const UserName: React.FC = () => {
   const [isValid, setIsValid] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [message, setMessage] = useState('')
-  const hasMinimumMushroomRequired = useHasMushroomBalance(minimumMushroomToRegister)
+  const hasMinimumShroomRequired = useHasShroomBalance(minimumShroomToRegister)
   const [onPresentConfirmProfileCreation] = useModal(
     <ConfirmProfileCreationModal
       userName={userName}
       tokenId={tokenId}
       account={account}
       teamId={teamId}
-      minimumMushroomRequired={minimumMushroomRequired}
+      minimumShroomRequired={minimumShroomRequired}
       allowance={allowance}
     />,
     false,
@@ -240,9 +240,9 @@ const UserName: React.FC = () => {
       <Button onClick={onPresentConfirmProfileCreation} disabled={!isValid || !isUserCreated}>
         {TranslateString(842, 'Complete Profile')}
       </Button>
-      {!hasMinimumMushroomRequired && (
+      {!hasMinimumShroomRequired && (
         <Text color="failure" mt="16px">
-          {TranslateString(1098, `A minimum of ${REGISTER_COST} MUSHROOM is required`, { num: REGISTER_COST })}
+          {TranslateString(1098, `A minimum of ${REGISTER_COST} SHROOM is required`, { num: REGISTER_COST })}
         </Text>
       )}
     </>

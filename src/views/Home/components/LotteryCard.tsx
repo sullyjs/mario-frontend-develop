@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react'
 import styled from 'styled-components'
 import { Heading, Card, CardBody, Button, useModal } from '@marioswap-libs/uikit'
-import { getMushroomAddress } from 'utils/addressHelpers'
+import { getShroomAddress } from 'utils/addressHelpers'
 import { getBalanceNumber } from 'utils/formatBalance'
 import useI18n from 'hooks/useI18n'
 import useGetLotteryHasDrawn from 'hooks/useGetLotteryHasDrawn'
@@ -12,7 +12,7 @@ import BuyModal from 'views/Lottery/components/TicketCard/BuyTicketModal'
 import { useLotteryAllowance } from 'hooks/useAllowance'
 import { useApproval } from 'hooks/useApproval'
 import PurchaseWarningModal from 'views/Lottery/components/TicketCard/PurchaseWarningModal'
-import MushroomWinnings from './MushroomWinnings'
+import ShroomWinnings from './ShroomWinnings'
 import LotteryJackpot from './LotteryJackpot'
 
 const StyledLotteryCard = styled(Card)`
@@ -51,7 +51,7 @@ const FarmedStakingCard = () => {
   const [onPresentApprove] = useModal(<PurchaseWarningModal />)
   const { claimAmount } = useTotalClaim()
   const { onMultiClaim } = useMultiClaimLottery()
-  const mushroomBalance = useTokenBalance(getMushroomAddress())
+  const shroomBalance = useTokenBalance(getShroomAddress())
   const { handleApprove, requestedApproval } = useApproval(onPresentApprove)
 
   const handleClaim = useCallback(async () => {
@@ -71,7 +71,7 @@ const FarmedStakingCard = () => {
     if (!allowance.toNumber()) {
       return (
         <Button width="100%" disabled={requestedApproval} onClick={handleApprove}>
-          {TranslateString(494, 'Approve MUSHROOM')}
+          {TranslateString(494, 'Approve SHROOM')}
         </Button>
       )
     }
@@ -82,7 +82,7 @@ const FarmedStakingCard = () => {
     )
   }
 
-  const [onPresentBuy] = useModal(<BuyModal max={mushroomBalance} tokenName="MUSHROOM" />)
+  const [onPresentBuy] = useModal(<BuyModal max={shroomBalance} tokenName="SHROOM" />)
 
   return (
     <StyledLotteryCard>
@@ -90,10 +90,10 @@ const FarmedStakingCard = () => {
         <Heading size="xl" mb="24px">
           {TranslateString(550, 'Your Lottery Winnings')}
         </Heading>
-        <CardImage src="/images/ticket.svg" alt="mushroom logo" width={64} height={64} />
+        <CardImage src="/images/ticket.svg" alt="shroom logo" width={64} height={64} />
         <Block>
-          <Label>{TranslateString(552, 'MUSHROOM to Collect')}:</Label>
-          <MushroomWinnings />
+          <Label>{TranslateString(552, 'SHROOM to Collect')}:</Label>
+          <ShroomWinnings />
         </Block>
         <Block>
           <Label>{TranslateString(554, 'Total jackpot this round')}:</Label>

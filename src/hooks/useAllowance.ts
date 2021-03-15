@@ -3,18 +3,18 @@ import BigNumber from 'bignumber.js'
 import { useWeb3React } from '@web3-react/core'
 import { Contract } from 'web3-eth-contract'
 import { getLotteryAddress } from 'utils/addressHelpers'
-import { useMushroom } from './useContract'
+import { useShroom } from './useContract'
 
 // Retrieve lottery allowance
 export const useLotteryAllowance = () => {
   const [allowance, setAllowance] = useState(new BigNumber(0))
   const { account } = useWeb3React()
-  const mushroomContract = useMushroom()
+  const shroomContract = useShroom()
 
   useEffect(() => {
     const fetchAllowance = async () => {
-      // const res = await mushroomContract.methods.allowance(account, getLotteryAddress()).call()
-      const res = null
+      const res = await shroomContract.methods.allowance(account, getLotteryAddress()).call()
+      // const res = null
       setAllowance(new BigNumber(res))
     }
 
@@ -23,7 +23,7 @@ export const useLotteryAllowance = () => {
     }
     const refreshInterval = setInterval(fetchAllowance, 10000)
     return () => clearInterval(refreshInterval)
-  }, [account, mushroomContract])
+  }, [account, shroomContract])
 
   return allowance
 }
