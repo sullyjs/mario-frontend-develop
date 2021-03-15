@@ -123,7 +123,7 @@ const ActionPanel: React.FunctionComponent<ActionPanelProps> = ({ details, apr, 
       <InfoContainer>
         <StakeContainer>
           Stake:
-          <StyledLinkExternal href={`http://localhost:3002/#/add/${liquidityUrlPathParts}`}>
+          <StyledLinkExternal href={`https://wizardly-leavitt-20ca43.netlify.app/#/add/${liquidityUrlPathParts}`}>
             {lpLabel}
           </StyledLinkExternal>
         </StakeContainer>

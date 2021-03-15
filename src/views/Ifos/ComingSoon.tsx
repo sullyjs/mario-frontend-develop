@@ -63,7 +63,7 @@ const ComingSoon = () => {
               )}
             </Text>
             <Text mb={3}>
-              <LiquidityLink href="http://localhost:3002/#/add/ETH/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82">
+              <LiquidityLink href="https://wizardly-leavitt-20ca43.netlify.app/#/add/ETH/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82">
                 {TranslateString(506, 'Get SHROOM-BNB LP >')}
               </LiquidityLink>
             </Text>

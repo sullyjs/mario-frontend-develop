@@ -52,10 +52,10 @@ const Ifo = () => {
             <li>{TranslateString(598, 'Get SHROOM-BNB LP tokens by adding SHROOM and BNB liquidity')}</li>
           </List>
           <Flex mb="16px">
-            <LinkExternal href="http://localhost:3002/#/swap" mr="16px">
+            <LinkExternal href="https://wizardly-leavitt-20ca43.netlify.app/#/swap" mr="16px">
               {TranslateString(1060, 'Buy SHROOM')}
             </LinkExternal>
-            <LinkExternal href="http://localhost:3002/#/add/ETH/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82">
+            <LinkExternal href="https://wizardly-leavitt-20ca43.netlify.app/#/add/ETH/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82">
               {TranslateString(1062, 'Get LP tokens')}
             </LinkExternal>
           </Flex>

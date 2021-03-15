@@ -12,11 +12,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'http://localhost:3002',
+        href: 'https://wizardly-leavitt-20ca43.netlify.app',
       },
       {
         label: 'Liquidity',
-        href: 'http://localhost:3002/#/pool',
+        href: 'https://wizardly-leavitt-20ca43.netlify.app/#/pool',
       },
     ],
   },
