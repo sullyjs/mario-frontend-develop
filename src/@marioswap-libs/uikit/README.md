@@ -1,4 +1,4 @@
-# 🥞 Mario UIkit
+# 🍄 Mario UIkit
 
 [![Version](https://img.shields.io/npm/v/@marioswap-libs/uikit)](https://www.npmjs.com/package/@marioswap-libs/uikit) [![Size](https://img.shields.io/bundlephobia/min/@marioswap-libs/uikit)](https://www.npmjs.com/package/@marioswap-libs/uikit)
 

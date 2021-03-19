@@ -1,4 +1,4 @@
-# Contributing to the Mario ecosystem 🥞
+# Contributing to the Mario ecosystem 🍄
 
 Thanks for taking the time to contribute !
 You can start by reading our [Contribution guidelines](https://docs.marioswap.finance/code/contributing) first.

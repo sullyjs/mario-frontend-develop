@@ -42,7 +42,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     audio.play();    
-    audio.loop = true;
+    // audio.loop = true;
     return () => {audio.pause()}
   }, [])
 
