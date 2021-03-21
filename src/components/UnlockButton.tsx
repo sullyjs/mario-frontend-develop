@@ -8,12 +8,12 @@ import Countdown from "react-countdown";
 const UnlockButton = (props) => {
   const [completion, setCompletion] = useState(false);
   const Completionist = () => <span>{TranslateString(292, 'Unlock Wallet')}</span>;
-  const renderer = ({ formatted:{hours} , minutes, seconds, completed }) => {
+  const renderer = ({ hours , days, minutes, completed }) => {
     if (completed)
     {
       setCompletion(true)
       }
-    return completed?(<Completionist />):(<span>{`${hours}h `}:{` ${minutes}m `}:{` ${seconds}s`}</span>)
+    return completed?(<Completionist />):(<span>{`${days} Days `}:{` ${hours} Hrs `}:{` ${minutes} Minutes`}</span>)
 };
   const TranslateString = useI18n()
   const { login, logout } = useAuth()
@@ -21,7 +21,7 @@ const UnlockButton = (props) => {
 
   return (
     <Button disabled={!completion} onClick={onPresentConnectModal} {...props}>
-      <Countdown daysInHours renderer={renderer} date={Date.parse('2021-03-20T00:00:00.000+05:30')} />
+      <Countdown daysInHours renderer={renderer} date={Date.parse('2021-03-28T00:00:00.000+05:30')} />
     </Button>
   )
 }

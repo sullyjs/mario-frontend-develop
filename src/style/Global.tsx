@@ -13,6 +13,8 @@ const slide = keyframes`
 `
 
 const GlobalStyle = createGlobalStyle`
+
+@font-face {font-family: "Yoster Island"; src: url("/fonts/yoster.ttf");
   * {
   font-family: "Yoster Island";
  }
