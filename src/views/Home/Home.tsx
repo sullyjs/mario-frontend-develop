@@ -24,16 +24,34 @@ const Hero = styled.div`
   margin-bottom: 32px;
   padding-top: 116px;
   text-align: center;
+  min-height: calc(90vh - 64px);
+
+  ${({ theme }) => theme.mediaQueries.sm} {
+    background-image: url('/images/header-bg.png');
+    background-size: cover;
+    margin-left: -24px;
+    margin-right: -24px;
+    margin-top: -24px;
+    background-position: center center;
+      min-height: calc(80vh - 64px);
+
+
+  }
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    background-image: url('/images/mario-bg5.png'), url('/images/mario-bg6.png');
-    background-position: left top, right center;
-    background-size: 23% auto;
-    height: 165px;
-    padding-top: 0;    
+    background-image: url('/images/header-bg.png');
+    background-size: cover;
+    padding-top: 0;
+    margin-left: -24px;
+    margin-right: -24px;
+    margin-top: -32px;
+    background-position: center center;
+
   }
 `
-
+    // background-image: url('/images/mario-bg5.png'), url('/images/mario-bg6.png');
+    // background-position: left top, right center;
+    // background-size: 23% auto;
 const Cards = styled(BaseLayout)`
   align-items: stretch;
   justify-content: stretch;
@@ -56,7 +74,15 @@ const Cards = styled(BaseLayout)`
     }
   }
 `
-
+const CustomText = styled(Text)`
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  border: solid;
+  border-width: 1px;
+  border-radius: 30px;
+  padding-left:2px;
+  padding-right:2px;
+`
 const CTACards = styled(BaseLayout)`
   align-items: start;
   margin-bottom: 32px;
@@ -80,7 +106,7 @@ const CTACards = styled(BaseLayout)`
 const CustomHeading = styled(Heading)`
   font-size: 60px;
   color: #8873f6;
-font-family: "Super Mario 256"`
+  font-family: "Super Mario 256"`
 
 const Home: React.FC = () => {
   const TranslateString = useI18n()
@@ -89,18 +115,12 @@ const Home: React.FC = () => {
     <Page>
       <Hero>
         <CustomHeading as="h1" size="xl" mb="24px" color="secondary">
-          {TranslateString(576, 'MARIOSWAP')}
+          
+<img src="https://fontmeme.com/permalink/210321/efb74c0a596f5e6a83d13527aae6651a.png" alt="super-mario-font" />
         </CustomHeading>
-        <Text>{TranslateString(578, 'The fast growing DeFi based on Binance Smart Chain (BSC)')}</Text>
+        <CustomText>{TranslateString(578, 'The fast growing DeFi based on Binance Smart Chain (BSC)')}</CustomText>
       </Hero>
-      <div
-    //     style={{
-    //     backgroundImage: "url('./images/mario-background.png')",
-    // backgroundRepeat: "repeat",
-    //     backgroundSize: "80px 80px",
-    //     backgroundOrigin: "padding-box",
-    //     }}
-      >
+     
         <Cards>
           <FarmStakingCard />
           {/* <LotteryCard /> */}
@@ -115,7 +135,6 @@ const Home: React.FC = () => {
           <ShroomStats />
           <TotalValueLockedCard />
         </Cards>
-      </div>
     </Page>
   )
 }

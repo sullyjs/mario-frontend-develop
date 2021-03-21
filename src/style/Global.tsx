@@ -14,20 +14,20 @@ const slide = keyframes`
 
 const GlobalStyle = createGlobalStyle`
   * {
-  font-family: muli, sans-serif;
+  font-family: "Yoster Island";
  }
 
-  }
+  
   body {
-    background: ${({ theme }) => theme.colors.background} url('/images/smb35-tile-5.png') repeat 0 0;
-    animation: ${slide} 20s linear infinite;
+    background: ${({ theme }) => theme.colors.background};
     img {
       height: auto;
       max-width: 100%;
     }
   }
 `
-
+//  background: ${({ theme }) => theme.colors.background} url('/images/smb35-tile-5.png') repeat 0 0;
+//     animation: ${slide} 20s linear infinite;
 export default GlobalStyle
 // background-color: ${({ theme }) => theme.colors.background};
 //     background-image: url('/images/smb35-tile-5.png');

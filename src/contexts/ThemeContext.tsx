@@ -59,7 +59,7 @@ const marioLight = {
   },
   "colors": {
     "failure": "#ED4B9E",
-    "primary": "#8873f4",
+    "primary": "#499DF5",
     "primaryBright": "#53DEE9",
     "primaryDark": "#0098A1",
     "secondary": "#e06221",
@@ -75,7 +75,7 @@ const marioLight = {
     "tertiary": "#EFF4F5",
     "text": "#32558c",
     "textDisabled": "#BDC2C4",
-    "textSubtle": "#484848",
+    "textSubtle": "#0198E1",
     "borderColor": "#E9EAEB",
     "card": "#FFFFFF",
     "gradients": {
@@ -95,9 +95,9 @@ const marioLight = {
     "handleBackground": "#FFFFFF"
   },
   "nav": {
-    "menuBackground": "#d23c41",
+    "menuBackground": "#ffffff",
     "background": "#ffffff",
-    "hover": "#EEEAF4"
+    "hover": "#0198E1"
   },
   "modal": {
     "background": "#FFFFFF"
