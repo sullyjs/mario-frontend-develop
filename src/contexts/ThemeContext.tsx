@@ -75,7 +75,7 @@ const marioLight = {
     "tertiary": "#EFF4F5",
     "text": "#32558c",
     "textDisabled": "#BDC2C4",
-    "textSubtle": "#484848",
+    "textSubtle": "#4CA6FF",
     "borderColor": "#E9EAEB",
     "card": "#FFFFFF",
     "gradients": {
@@ -95,7 +95,7 @@ const marioLight = {
     "handleBackground": "#FFFFFF"
   },
   "nav": {
-    "menuBackground": "#FFFFFF",
+    "menuBackground": "#ffffff",
     "background": "#ffffff",
     "hover": "#499DF5"
   },
