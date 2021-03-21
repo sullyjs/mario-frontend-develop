@@ -32,7 +32,7 @@ const WinCard = () => {
         <Heading color="contrast" size="lg">
           Lottery with
         </Heading>
-        <CardMidContent color="#7645d9">${lotteryPrize}</CardMidContent>
+        <CardMidContent color="#499DF5">${lotteryPrize}</CardMidContent>
         <Flex justifyContent="space-between">
           <Heading color="contrast" size="lg">
             up for grabs
