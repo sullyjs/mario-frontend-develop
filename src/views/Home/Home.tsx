@@ -118,7 +118,7 @@ const Home: React.FC = () => {
           
 <img src="https://fontmeme.com/permalink/210321/efb74c0a596f5e6a83d13527aae6651a.png" alt="super-mario-font" />
         </CustomHeading>
-        <CustomText>{TranslateString(578, 'The fast growing DeFi based on Binance Smart Chain (BSC)')}</CustomText>
+        <CustomText>{TranslateString(578, 'The fastest growing DeFi based on Binance Smart Chain (BSC)')}</CustomText>
       </Hero>
      
         <Cards>
