@@ -95,9 +95,9 @@ const marioLight = {
     "handleBackground": "#FFFFFF"
   },
   "nav": {
-    "menuBackground": "#d23c41",
+    "menuBackground": "#499DF5",
     "background": "#ffffff",
-    "hover": "#EEEAF4"
+    "hover": "#499DF5"
   },
   "modal": {
     "background": "#FFFFFF"
