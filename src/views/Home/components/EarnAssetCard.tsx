@@ -7,7 +7,7 @@ import pools from 'config/constants/pools'
 import { Pool } from 'state/types'
 
 const StyledFarmStakingCard = styled(Card)`
-  background: linear-gradient(#53dee9, #7645d9);
+  background: linear-gradient(#53dee9, #499DF5);
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -38,7 +38,7 @@ const EarnAssetCard = () => {
             in Pools
           </Heading> */}
           <NavLink exact activeClassName="active" to="/syrup" id="pool-cta">
-            <ArrowForwardIcon mt={30} color="primary" />
+            <ArrowForwardIcon mt={30} color="#499DF5" />
           </NavLink>
         </Flex>
       </CardBody>

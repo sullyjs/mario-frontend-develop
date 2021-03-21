@@ -105,8 +105,8 @@ const CTACards = styled(BaseLayout)`
 `
 const CustomHeading = styled(Heading)`
   font-size: 60px;
-  color: #8873f6;
-  font-family: "Super Mario 256"`
+  color: #499DF5;
+font-family: "Super Mario 256"`
 
 const Home: React.FC = () => {
   const TranslateString = useI18n()
