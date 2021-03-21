@@ -91,7 +91,7 @@ const Home: React.FC = () => {
         <CustomHeading as="h1" size="xl" mb="24px" color="secondary">
           {TranslateString(576, 'MARIOSWAP')}
         </CustomHeading>
-        <Text>{TranslateString(578, 'The fast growing DeFi based on Binance Smart Chain (BSC)')}</Text>
+        <Text>{TranslateString(578, 'The fastest growing DeFi based on Binance Smart Chain (BSC)')}</Text>
       </Hero>
       <div
     //     style={{
