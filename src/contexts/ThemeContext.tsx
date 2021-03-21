@@ -59,7 +59,7 @@ const marioLight = {
   },
   "colors": {
     "failure": "#ED4B9E",
-    "primary": "#8873f4",
+    "primary": "#499DF5",
     "primaryBright": "#53DEE9",
     "primaryDark": "#0098A1",
     "secondary": "#e06221",
@@ -95,7 +95,7 @@ const marioLight = {
     "handleBackground": "#FFFFFF"
   },
   "nav": {
-    "menuBackground": "#499DF5",
+    "menuBackground": "#FFFFFF",
     "background": "#ffffff",
     "hover": "#499DF5"
   },
