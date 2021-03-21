@@ -79,7 +79,7 @@ const CTACards = styled(BaseLayout)`
 `
 const CustomHeading = styled(Heading)`
   font-size: 60px;
-  color: #8873f6;
+  color: #0198E1;
 font-family: "Super Mario 256"`
 
 const Home: React.FC = () => {
