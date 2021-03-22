@@ -12,8 +12,8 @@ import ShroomWalletBalance from './ShroomWalletBalance'
 const StyledFarmStakingCard = styled(Card)`
   background-image: url('/images/mario-card-bg2.png');
   background-repeat: no-repeat;
-  background-position: center right;
-  background-size: auto 70%;
+  background-position: 120% 0%;
+  background-size: auto 80%;
   min-height: 376px;
 `
 

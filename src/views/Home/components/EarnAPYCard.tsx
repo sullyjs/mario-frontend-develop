@@ -14,8 +14,8 @@ const StyledFarmStakingCard = styled(Card)`
   width: 100%;
   background-image: url('/images/apr-card-bg.png');
   background-repeat: no-repeat;
-  background-position: top right;
-  background-size: auto 70%;
+  background-position: right center;
+  background-size: auto 75%;
 
   ${({ theme }) => theme.mediaQueries.lg} {
     margin: 0;
@@ -24,6 +24,7 @@ const StyledFarmStakingCard = styled(Card)`
 `
 const CardMidContent = styled(Heading).attrs({ size: 'xl' })`
   line-height: 44px;
+  padding-right:20%;
 `
 const EarnAPYCard = () => {
   const TranslateString = useI18n()
@@ -86,7 +87,8 @@ const EarnAPYCard = () => {
         </Heading>
         <CardMidContent color="#499DF5">
           {getHighestAPY() ? (
-            `${getHighestAPY()}% ${TranslateString(736, 'APR')}`
+            `${getHighestAPY()}%
+            ${TranslateString(736, 'APR')}`
           ) : (
             <Skeleton animation="pulse" variant="rect" height="44px" />
           )}

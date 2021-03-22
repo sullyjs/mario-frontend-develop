@@ -7,19 +7,19 @@ import LotteryProgress from './LotteryProgress'
 
 const Title = styled(Heading).attrs({ as: 'h1', size: 'xl' })`
   color: ${({ theme }) => theme.colors.secondary};
-  color:#484848;
+  color:white;
   margin-bottom: 24px;
 `
 
 const Blurb = styled(Text)`
-  color: #ffffff;
+  color: #0198E1;
   font-size: 20px;
   font-weight: 600;
 `
 
   // background-image: linear-gradient(180deg, #53dee9 0%, #1fc7d4 100%);
 const StyledHero = styled.div`
-  background-color: #ffaf14;
+  background-color: #F42A3E;
   padding-bottom: 40px;
   padding-top: 40px;
 `
