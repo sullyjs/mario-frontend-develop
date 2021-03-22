@@ -79,7 +79,7 @@ const Ifo = () => {
           </Text>
         </div>
         <div>
-          <Image src="/images/ifo-mario.png" alt="ifo toad" width={429} height={399} responsive />
+          <Image src="/images/ifo-mario.png" alt="ifo toad" width={436} height={409} responsive />
           <div>
             <Title as="h2">{TranslateString(512, 'Want to launch your own IFO?')}</Title>
             <Text mb={3}>
