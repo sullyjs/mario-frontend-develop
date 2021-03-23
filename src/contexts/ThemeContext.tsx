@@ -8,6 +8,9 @@ const CACHE_KEY = 'IS_DARK'
 
 const ThemeContext = React.createContext({ isDark: null, toggleTheme: () => null })
 // "primary": "#e70012",
+// "tertiary": "#EFF4F5",
+// "tertiary": "#353547",
+
 const marioLight = {
   "siteWidth": 1200,
   "breakpoints": [
@@ -72,7 +75,7 @@ const marioLight = {
     "invertedContrast": "#FFFFFF",
     "input": "#eeeaf4",
     "inputSecondary": "#d7caec",
-    "tertiary": "#EFF4F5",
+    "tertiary": "#0198e1",
     "text": "#32558c",
     "textDisabled": "#BDC2C4",
     "textSubtle": "#0198E1",
@@ -80,7 +83,9 @@ const marioLight = {
     "card": "#FFFFFF",
     "gradients": {
       "bubblegum": "linear-gradient(139.73deg, #E6FDFF 0%, #F3EFFF 100%)"
-    }
+    },
+        "navHover": "#FFFFFF",
+
   },
   "card": {
     "background": "#FFFFFF",
@@ -109,7 +114,8 @@ const marioLight = {
     "background": "#27262c",
     "text": "#EAE2FC",
     "boxShadow": "0px 0px 2px rgba(0, 0, 0, 0.2), 0px 4px 12px -8px rgba(14, 14, 44, 0.1)"
-  }
+  },
+  
 };
 
 const marioDark ={
@@ -176,7 +182,7 @@ const marioDark ={
     "invertedContrast": "#191326",
     "input": "#483f5a",
     "inputSecondary": "#66578D",
-    "tertiary": "#353547",
+    "tertiary": "#0198e1",
     "text": "#EAE2FC",
     "textDisabled": "#666171",
     "textSubtle": "#499DF5",
@@ -184,7 +190,8 @@ const marioDark ={
     "card": "#27262c",
     "gradients": {
       "bubblegum": "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)"
-    }
+    },
+    "navHover": "#FFFFFF",
   },
   "card": {
     "background": "#27262c",
